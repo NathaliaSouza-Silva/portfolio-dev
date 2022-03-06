@@ -55,6 +55,66 @@ p, a{
     overflow: hidden;
 }
 
+/*================= HEADER: NAVIGATION ================*/
+
+nav .menu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*================= NAVIGATION: MENU DISPLAYED ============================*/
+
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+    background-color: #17191A;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    
+}
+nav.show ul{
+    display: grid;
+    gap: 4rem;
+
+}
+
+nav.show ul li{
+    list-style-type: none;
+    font-size: 5rem;
+    text-align: center;
+}
+
+/*===================== NAVIGATION: TOGGLE MENU =============================*/
+.open, .close{
+    position: fixed;
+    top: 0;
+    right: 1rem;
+    color: #eee;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+nav .close{
+    visibility: hidden;
+    opacity: 0;
+}
+
+nav.show .close{
+    visibility: visible;
+    opacity: 1;
+}
+
+nav.show .open{
+    opacity: 0;
+    visibility: hidden;
+}
+/*====================== HEADER: TITLE ======================================*/
+
 h1{
     font-size: 6rem;
 }
@@ -240,7 +300,7 @@ main section{
     font-size: 1.5rem;
 }
 
-/*======================= FOOTER ==============================================*/
+/*======================= FOOTER ===============================*/
 #footer{
     width: 100vw;
     height: 30vh;
