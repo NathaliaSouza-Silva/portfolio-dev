@@ -49,7 +49,7 @@ p, a{
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    background-image: url("/images/h-banner.jpg");
+    background-image: url("../images/h-banner.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -150,20 +150,24 @@ main section{
 }
 
 .projeto1{
-    background-image: url("/images/project-banner1.jpg");
+    background-image: url("../images/project-banner1.jpg");
     background-size: cover;
     background-blend-mode: color;
     margin-top: 5%;
 }
 
 .projeto2{
-    background-image: url("/images/project-banner2.jpg");
+    background-image: url("../images/project-banner2.jpg");
     background-size: cover;
     background-blend-mode: color;
 }
 
 .projeto3{
+<<<<<<< HEAD
     background-image: url(".../images/project-banner3.jpg");
+=======
+    background-image: url("../images/project-banner3.jpg");
+>>>>>>> deb45e3419aaecf1160a0509b1cc9a39fe19ff03
     background-size: cover;
     background-blend-mode: color;
 }
