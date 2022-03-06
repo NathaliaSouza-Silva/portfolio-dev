@@ -106,6 +106,7 @@ nav.show ul li{
     color: #eee;
     font-size: 3rem;
     cursor: pointer;
+    z-index: 100;
 }
 
 nav .close{
