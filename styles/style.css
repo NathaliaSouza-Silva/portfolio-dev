@@ -163,7 +163,7 @@ main section{
 }
 
 .projeto3{
-    background-image: url("/images/project-banner3.jpg");
+    background-image: url(".../images/project-banner3.jpg");
     background-size: cover;
     background-blend-mode: color;
 }
