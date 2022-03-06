@@ -163,11 +163,7 @@ main section{
 }
 
 .projeto3{
-<<<<<<< HEAD
-    background-image: url(".../images/project-banner3.jpg");
-=======
     background-image: url("../images/project-banner3.jpg");
->>>>>>> deb45e3419aaecf1160a0509b1cc9a39fe19ff03
     background-size: cover;
     background-blend-mode: color;
 }
