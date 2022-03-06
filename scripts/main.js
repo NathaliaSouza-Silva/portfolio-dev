@@ -15,3 +15,14 @@ for (const link of links) {
         nav.classList.remove('show');
     })
 }
+
+// Scroll Reveal JS
+
+const scrollReveal = ScrollReveal({
+    origin: 'left',
+    distance: '30px',
+    duration: 1000,
+    reset: true
+})
+
+scrollReveal.reveal(`.projeto`, { interval: 100 })
