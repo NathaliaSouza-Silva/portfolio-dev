@@ -7,14 +7,22 @@
     --secondary-font: "Montserrat", sans-serif;
     --bg: #17191A;
     font-size: 10px;
+   
+ 
 }
 
 /*========================== RESET =============================*/
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 a{
     text-decoration: none;
@@ -75,6 +83,7 @@ nav.show .menu{
     left: 0;
     display: grid;
     place-content: center;
+    transition: .5s;
     
 }
 nav.show ul{
@@ -102,6 +111,7 @@ nav.show ul li{
 nav .close{
     visibility: hidden;
     opacity: 0;
+    transition: 0.5s;
 }
 
 nav.show .close{
