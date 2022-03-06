@@ -150,20 +150,20 @@ main section{
 }
 
 .projeto1{
-    background-image: url(".../images/project-banner1.jpg");
+    background-image: url("../images/project-banner1.jpg");
     background-size: cover;
     background-blend-mode: color;
     margin-top: 5%;
 }
 
 .projeto2{
-    background-image: url(".../images/project-banner2.jpg");
+    background-image: url("../images/project-banner2.jpg");
     background-size: cover;
     background-blend-mode: color;
 }
 
 .projeto3{
-    background-image: url(".../images/project-banner3.jpg");
+    background-image: url("../images/project-banner3.jpg");
     background-size: cover;
     background-blend-mode: color;
 }
