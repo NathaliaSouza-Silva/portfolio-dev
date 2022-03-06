@@ -84,6 +84,7 @@ nav.show .menu{
     display: grid;
     place-content: center;
     transition: .5s;
+    z-index: 100;
     
 }
 nav.show ul{
