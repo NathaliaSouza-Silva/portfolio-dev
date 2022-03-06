@@ -85,34 +85,32 @@
                 <header>
                     <h3>Contato</h3>
                 </header>
-                <form action="#">
-                    <label for="name" class="label">Nome*</label>
-                    <input type="text" id="name" class="input" required>
-                    <label for="email" class="label">Email*</label>
-                    <input type="email" id="email" class="input" required>
-                    <label for="msg" class="label">Mensagem*</label>
-                    <textarea name="msg" id="msg" cols="30" rows="10" class="txt_msg" required></textarea>
-                    <button class="f-btn">Enviar</button>
-                </form>
+                <div class="form-contato">
+                    <form action="#">
+                        <div class="label-input">
+                            <label for="name" class="label">Nome</label>
+                            <input type="text" id="name" class="input" required>
+                        </div>
+                        <div class="label-input">
+                            <label for="email" class="label">Email</label>
+                            <input type="email" id="email" class="input" required>
+                        </div>
+                        <div class="label-input">
+                            <label for="msg" class="label">Mensagem</label>
+                            <textarea name="msg" id="msg" cols="30" rows="10" class="txt_msg" required></textarea>
+                        </div>
+                        <button class="btn">Enviar</button>
+                    </form>
+                </div>
             </section>
         </main>
-        <footer>
+        <footer id="footer">
             <p>&copy; Copyrigth 2022, Nathalia Souza da Silva - Todos os direitos reservados.</p>
             <ul>
                 <li><i class="fa-brands fa-github-square"></i> <a href="https://github.com/NathaliaSouza-Silva" target="_blank">GitHub</a></li>
                 <li> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/nathalia-souza-b858551a5/" target="_blank">Linkedin</a></li>
                 <li><i class="fa-solid fa-square-envelope"></i> <a href="mailto:dasilvasouzanathalia@gmail.com" target="_blank" rel="author">Email</a></li>
             </ul>
-            <section id="creditos">
-                <h5>Créditos das imagens usadas nesse site</h5>
-                <p>Todas as imagens foram retiradas do site <a href="#" target="_blank" rel="external">Unsplash</a>. Gostaria de dar créditos aos criadores citados abaixo.
-                </p> 
-                <ul>
-                    <li>Pessoa 1</li>
-                    <li>Pessoa 2</li>
-                    <li>Pessoa 3</li>
-                </ul>
-            </section>
         </footer>
         <script src="/scripts/main.js"></script>
     </body>
