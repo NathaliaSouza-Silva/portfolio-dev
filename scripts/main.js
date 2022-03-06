@@ -1,3 +1,5 @@
+alert('OLÁ')
+
 const nav = document.querySelector(".n-container");
 const toggle = document.querySelectorAll(".toggle");
 
