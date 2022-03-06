@@ -1,0 +1,197 @@
+/*========================== FONTS =============================*/
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300&family=Montserrat:ital,wght@0,300;0,500;0,600;1,400&display=swap');
+
+/*========================== VARIABLES =========================*/
+:root{
+    --primary-font: "Advent Pro", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+    --bg: #17191A;
+    font-size: 10px;
+}
+
+/*========================== RESET =============================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--bg);
+}
+/*========================= FORMATAÇÃO DE TEXTOS GLOBAL =============================*/
+h1, h2, h3, h4{
+    font-family: var(--primary-font);
+    color: #eee;
+    font-weight: 200;
+    text-align: center;
+}
+
+button, label, 
+li, input, 
+p, a{
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    color: rgb(216, 216, 216);
+}
+
+
+/*========================= CABEÇALHO ==========================*/
+
+#header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/h-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+/*======================== MAIN - SECTION: SOBRE==============================*/
+
+main h3{
+    font-size: 4rem;
+    margin: 1rem 0 ;
+}
+
+main section{
+    margin-top: 5%;
+    width: 100%;
+    height: 100vh;
+}
+
+#sobre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.greeting{
+    margin: auto;
+}
+
+.sobre-img{
+    display: none;
+}
+
+.greeting p{
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.7;
+    text-indent: 2rem;
+    hyphens: auto;
+    font-size: 1.5rem;
+}
+
+.skills{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    flex-grow: 3;
+}
+
+.skills-items ul{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    
+}
+
+.skills-items ul li{
+    font-size: 1.5rem;
+    list-style-type: none;
+    text-align: center;
+
+}
+
+.skills-items ul li i{
+    font-size: 2.5rem;
+    display: block;
+}
+
+/*=============================== MAIN - SECTION:PROJETOS =====================*/
+
+.projetos-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: 90%;
+}
+
+.projeto{
+    width: 90%;
+    height: 32%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.412);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1.3rem;
+}
+
+.projeto1{
+    background-image: url("/images/project-banner1.jpg");
+    background-size: cover;
+    background-blend-mode: color;
+    margin-top: 5%;
+}
+
+.projeto2{
+    background-image: url("/images/project-banner2.jpg");
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+.projeto3{
+    background-image: url("/images/project-banner3.jpg");
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+.projeto h4{
+    font-size: 3rem;
+    font-weight: 500;
+    margin: .5rem auto;
+}
+
+.projeto p{
+    width: 90%;
+    margin: auto;
+    font-size: 1.7rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.btn{
+    display: inline-block;
+    height: 3rem;
+    width: 15rem;
+    padding: 0.3rem;
+    color: #17191A;
+    background-color: rgb(155, 154, 154);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    
+}
