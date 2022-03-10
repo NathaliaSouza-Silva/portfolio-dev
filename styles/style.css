@@ -322,8 +322,14 @@ a:hover{
     height: 6vh;
     color: #17191A;
 }
+
+.divider{
+    width: 100%;
+    border-bottom: solid rgba(238, 238, 238, 0.241) .1rem;
+}
 /*======================= FOOTER ===============================*/
 #footer{
+    margin-top: 2rem;
     width: 100vw;
     height: 30vh;
     
