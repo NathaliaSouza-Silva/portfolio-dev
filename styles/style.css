@@ -315,7 +315,8 @@ a:hover{
 }
 
 .label-input textarea{
-    height: 25vh;
+    max-height: 25vh;
+    max-width: 90%;
 }
 
 .f-btn{
