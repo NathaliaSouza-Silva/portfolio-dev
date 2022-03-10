@@ -31,7 +31,7 @@ a{
 body{
     background-color: var(--bg);
 }
-/*========================= FORMATAÇÃO DE TEXTOS GLOBAL =============================*/
+/*================ FORMATAÇÃO DE TEXTOS GLOBAL =============================*/
 h1, h2, h3, h4{
     font-family: var(--primary-font);
     color: #eee;
@@ -135,7 +135,7 @@ h2{
     font-size: 3rem;
 }
 
-/*======================== MAIN - SECTION: SOBRE==============================*/
+/*===================== MAIN - SECTION: SOBRE==============================*/
 
 main h3{
     font-size: 4rem;
@@ -193,7 +193,7 @@ main h3{
     display: block;
 }
 
-/*=============================== MAIN - SECTION:PROJETOS =====================*/
+/*=========================== MAIN - SECTION:PROJETOS =====================*/
 
 #projetos{
     width: 100vw;
@@ -216,7 +216,7 @@ main h3{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
-    gap: 1.3rem;
+    gap: 1rem;
 }
 
 .projeto1{
@@ -247,28 +247,25 @@ main h3{
 .projeto p{
     width: 90vw;
     margin: auto;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: justify;
     hyphens: auto;
-    padding: .5rem;
+    padding: .45rem;
 }
 
 .btn{
-    display: inline-block;
-    height: 4vh;
-    width: 35vw;
-    padding: 0.3rem;
-    color: #17191A;
-    background-color: rgb(155, 154, 154);
-    text-align: center;
+    color: #eee;
     font-size: 1.5rem;
-    font-weight: 600;
-    border-radius: 5px;
-    
+    font-weight: 600;  
+    transition: all .5s;   
+}
+
+a:hover{
+    font-size: 1.7rem;
 }
 
 
-/*=================================== MAIN - SEÇÃO 3 : CONTATO ====================*/
+/*============================= MAIN - SEÇÃO 3 : CONTATO ====================*/
 #contato{
     width: 100vw;
     height: 100vh;
