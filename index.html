@@ -28,8 +28,10 @@
                 <div class="open toggle" ><i class="fa-solid fa-bars"></i></div>
                 <div class="close toggle"><i class="fa-solid fa-xmark"></i></div>
             </nav>
-            <h1>Nathalia Souza</h1>
-            <h2>Portfólio de Projetos</h2>
+            <div class="header-title">
+                <h1>Nathalia Souza</h1>
+                <h2>Portfólio de Projetos</h2>
+            </div>
 
         </header>
         <main>
@@ -37,16 +39,17 @@
                 <div class="greeting">
                     <header>
                     <h3>Olá, sou Nathalia!</h3>
-                    <img src="/images/profile.png" alt="Imagem de Perfil" class="sobre-img">
+                    <!--<img src="/images/profile.png" alt="Imagem de Perfil" class="sobre-img">-->
                     </header>
-                    <p>Seja bem-vindo(a) ao meu portfólio. Meu nome é Nathalia e tenho 23 anos. Sou uma estudante de programação e desenvolvimento de sistemas e este é meu primeiro projeto de desenvolvimento web.</p>
-                    <p>Desde pequena sempre tive interesse por tecnologia e até hoje não consigo me encaixar em outra área que não seja relacionada à ela. É uma área que cresce todos os dias e é incrível como a tecnologia nos permite expandir e criar novas ferramentas, novas aplicação, novas teorias. Não há céu que seja limite para o conhecimento nessa área, indpendentemente do segmento ou área de atuação.</p>
+                    <p>Seja bem-vindo(a) ao meu portfólio. Tenho 23 anos e sou uma estudante de programação e desenvolvimento de sistemas. Este é meu primeiro projeto de desenvolvimento web.</p>
+                    <p>Desde pequena sempre tive interesse por tecnologia e até hoje não consigo me encaixar em outra área que não seja relacionada à ela. É uma área que cresce todos os dias e é incrível como a tecnologia nos permite expandir e criar novas ferramentas, novas aplicação, novas teorias. Não há limites para o conhecimento, indpendentemente do segmento ou área de atuação.</p>
                 </div>
                 <div class="skills">
                     <header>
                         <h3>Skills</h3>
                     </header>  
-                    <div class="skills-items">         
+                    <div class="skills-items">  
+ 
                         <ul>
                             <li><i class="fa-brands fa-html5"></i> HTML</li>
                             <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
@@ -55,6 +58,14 @@
                             <li><i class="fa-brands fa-python"></i> Python</li>
                             <li><i class="fa-solid fa-database"></i> SQL</li>
                         </ul>
+                        <div class="progress-bars">
+                            <div class="bar"><div class="progress" style="width: 75%;">75%</div></div>
+                            <div class="bar"><div class="progress" style="width: 60%;">60%</div></div>
+                            <div class="bar"><div class="progress" style="width: 35%;">35%</div></div>
+                            <div class="bar"><div class="progress"style="width: 80%;">80%</div></div>
+                            <div class="bar"><div class="progress"style="width: 65%;">65%</div></div>
+                            <div class="bar"><div class="progress"style="width: 25%;">25%</div></div>
+                        </div>       
                     </div>     
                 </div>
             </section>
@@ -91,29 +102,28 @@
                 <div class="form-contato">
                     <form action="#">
                         <div class="label-input">
-                            <label for="name" class="label">Nome</label>
                             <input type="text" id="name" class="input" required>
+                            <label for="name" class="label">Nome</label>
                         </div>
                         <div class="label-input">
-                            <label for="email" class="label">Email</label>
                             <input type="email" id="email" class="input" required>
+                            <label for="email" class="label">Email</label>
                         </div>
                         <div class="label-input">
-                            <label for="msg" class="label">Mensagem</label>
-                            <textarea name="msg" id="msg" cols="30" rows="10" class="txt_msg" required></textarea>
+                            <textarea name="msg" id="msg" cols="30" rows="10" class="input" required></textarea>
+                            <label for="msg" class="label msg">Mensagem</label>
                         </div>
                         <button class="btn f-btn">Enviar</button>
                     </form>
                 </div>
             </section>
         </main>
-        <div class="divider"></div>
         <footer id="footer">
-            <p>&copy; Copyrigth 2022, Nathalia Souza da Silva - Todos os direitos reservados.</p>
-            <ul>
-                <li><i class="fa-brands fa-github-square"></i> <a href="https://github.com/NathaliaSouza-Silva" target="_blank">GitHub</a></li>
-                <li> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/nathalia-souza-b858551a5/" target="_blank">Linkedin</a></li>
-                <li><i class="fa-solid fa-square-envelope"></i> <a href="mailto:dasilvasouzanathalia@gmail.com" target="_blank" rel="author">Email</a></li>
+            <p class="cpr">&copy; Copyrigth 2022, Nathalia Souza da Silva - Todos os direitos reservados.</p>
+            <ul class="social-container">
+                <li> <a href="https://github.com/NathaliaSouza-Silva" target="_blank"><i class="fa-brands fa-github-square"></i> </a></li>
+                <li>  <a href="https://www.linkedin.com/in/nathalia-souza-b858551a5/" target="_blank"><i class="fa-brands fa-linkedin"></i> </a></li>
+                <li> <a href="mailto:dasilvasouzanathalia@gmail.com" target="_blank" rel="author"> <i class="fa-solid fa-square-envelope"></i></a></li>
             </ul>
         </footer>
         <script src="https://unpkg.com/scrollreveal"></script>

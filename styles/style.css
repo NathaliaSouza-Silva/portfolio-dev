@@ -1,362 +1,441 @@
-/*========================== FONTS =============================*/
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300&family=Montserrat:ital,wght@0,300;0,500;0,600;1,400&display=swap');
+/*==================== WEB FONTS IMPORT ======================*/
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500&family=Jura:wght@300;400;500;600&family=Laila:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Marcellus&family=Merienda:wght@400;700&family=Poiret+One&family=Quicksand:wght@300;400;500;600;700&family=Sen&family=Space+Grotesk:wght@300;400;500&display=swap');
 
-/*========================== VARIABLES =========================*/
+/*===================== GLOBAL SETTINGS =====================*/
 :root{
-    --primary-font: "Advent Pro", sans-serif;
-    --secondary-font: "Montserrat", sans-serif;
-    --bg: #17191A;
     font-size: 10px;
-   
- 
-}
-
-/*========================== RESET =============================*/
-html{
-    scroll-behavior: smooth;
+    --title-font: "El Messiri";
+    --itens-font: "M PLUS Rounded 1c";
+    --para-font: "Space Grotesk";
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
 }
 
 
+h3{
+    font-size: 3rem;
+    font-family: var(--title-font);
+    font-weight: 300;
+    text-align: center;
+    color: #300D0B;
+}
 
 a{
     text-decoration: none;
+    color: black;
+
 }
 
-body{
-    background-color: var(--bg);
-}
-/*================ FORMATAÇÃO DE TEXTOS GLOBAL =============================*/
-h1, h2, h3, h4{
-    font-family: var(--primary-font);
-    color: #eee;
-    font-weight: 200;
-    text-align: center;
+li{
+    list-style-type: none;
 }
 
-button, label, 
-li, input, textarea, 
-p, a{
-    font-family: var(--secondary-font);
-    font-weight: 300;
-    color: rgb(216, 216, 216);
-}
-
-
-/*========================= CABEÇALHO ==========================*/
-
-#header{
-    width: 100%;
+/*=================== MENU ========================================*/
+    /*======================== SHOWING MENU =================*/
+.n-container.show .menu{
+    display: block;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    position: fixed;
     display: flex;
-    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/h-banner.jpg");
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-
-/*================= HEADER: NAVIGATION ================*/
-
-nav .menu{
-    opacity: 0;
-    visibility: hidden;
-}
-
-/*================= NAVIGATION: MENU DISPLAYED ============================*/
-
-nav.show .menu{
-    opacity: 1;
-    visibility: visible;
-    background-color: #17191A;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-content: center;
-    transition: .5s;
+    line-height: 10vh;
+    background-color: #F2F2F0;
+    animation-name: move-menu;
+    animation-duration: 1s;
     z-index: 100;
-    
-}
-nav.show ul{
-    display: grid;
-    gap: 4rem;
-
 }
 
-nav.show ul li{
-    list-style-type: none;
-    font-size: 3rem;
+
+.n-container.show .menu ul li{
     text-align: center;
 }
 
-/*===================== NAVIGATION: TOGGLE MENU =============================*/
-.open, .close{
-    position: fixed;
-    top: 0;
-    right: 1rem;
-    color: #eee;
-    font-size: 3rem;
-    cursor: pointer;
-    z-index: 100;
-}
 
-nav .close{
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-nav.show .close{
-    visibility: visible;
-    opacity: 1;
-}
-
-nav.show .open{
-    opacity: 0;
-    visibility: hidden;
-}
-/*====================== HEADER: TITLE ======================================*/
-
-h1{
-    font-size: 6rem;
-}
-
-h2{
-    font-size: 3rem;
-}
-
-/*===================== MAIN - SECTION: SOBRE==============================*/
-
-main h3{
+.n-container.show .menu ul li a{
     font-size: 4rem;
-    margin: 1rem 0 ;
+    font-family: var(--itens-font);
+    font-weight: 500;
+    color: #1F261F;
+    transition: all 1s;
 }
 
-#sobre{
-    display: flex;
-    flex-flow: column nowrap;
+.n-container.n-container.show .menu ul li a:hover{
+    color: #73463C;
 }
 
-.greeting{
-    margin: auto;
-}
-
-.sobre-img{
+.n-container.show .open{
     display: none;
 }
 
+.n-container.show .close{
+    display: block;
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+    font-size: 3rem;
+    color: #1F261F;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.n-container.show .close:hover{
+    color: #73463C;
+}
+
+        /*=============== NOT SHOWING MENU =================*/
+
+.n-container .menu{
+    display: none;
+}
+
+
+.n-container .open{
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 1s;
+    color: #B29E6A;
+}
+
+.n-container .open:hover{
+    color: #73463C;
+}
+
+.n-container .close{
+    display: none;
+}
+
+/*==================== HEADER - TITLE ======================*/
+.header-title{
+    background-color: #00000027;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/banner9.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-blend-mode: color;
+    overflow: hidden;
+  }
+
+.header-title h1{
+    font-size: 5rem;
+    font-family: var(--title-font);
+    font-weight: 300;
+    color: #1F261F;
+    text-align: center;
+    padding-left: 2rem;
+
+}
+
+.header-title h2{
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+    font-weight: 400;
+    color: #1F261F;
+    padding-left: 3rem;
+    text-align: center;
+}
+
+
+/*====================== MAIN - SOBRE ==============================*/
+#sobre{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting{
+    background-color: #F2F2F0;
+    width: 80%;
+    height: 50%;
+    margin-top: 2.5rem;
+}
+
+
 .greeting p{
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.7;
+    font-size: 1.65rem;
+    font-family: var(--para-font);
+    line-height: 2.5rem;
     text-indent: 2rem;
+    text-align: justify;
     hyphens: auto;
-    font-size: 1.5rem;
+    padding: 1rem;
 }
 
 .skills{
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    flex-grow: 3;
-}
-
-.skills-items ul{
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1.5rem;
-    
-}
-
-.skills-items ul li{
-    font-size: 1.5rem;
-    list-style-type: none;
-    text-align: center;
-
-}
-
-.skills-items ul li i{
-    font-size: 2.5rem;
-    display: block;
-}
-
-/*=========================== MAIN - SECTION:PROJETOS =====================*/
-
-#projetos{
-    width: 100vw;
-    height: 100vh;
-}
-.projetos-container{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-    height: 90%;
-}
-
-.projeto{
-    width: 90vw;
-    height: 33vh;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.412);
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    gap: 1rem;
-}
-
-.projeto1{
-    background-image: url("../images/project-banner1.jpg");
-    background-size: cover;
-    background-blend-mode: color;
-    margin-top: 5%;
-}
-
-.projeto2{
-    background-image: url("../images/project-banner2.jpg");
-    background-size: cover;
-    background-blend-mode: color;
-}
-
-.projeto3{
-    background-image: url("../images/project-banner3.jpg");
-    background-size: cover;
-    background-blend-mode: color;
-}
-
-.projeto h4{
-    font-size: 3rem;
-    font-weight: 500;
-    margin: .5rem auto;
-}
-
-.projeto p{
-    width: 90vw;
-    margin: auto;
-    font-size: 1.5rem;
-    text-align: justify;
-    hyphens: auto;
-    padding: .45rem;
-}
-
-.btn{
-    color: #eee;
-    font-size: 1.5rem;
-    font-weight: 600;  
-    transition: all .5s;   
-}
-
-a:hover{
-    font-size: 1.7rem;
-}
-
-
-/*============================= MAIN - SEÇÃO 3 : CONTATO ====================*/
-#contato{
-    width: 100vw;
-    height: 100vh;
-}
-
-.form-contato{
-    height: 80vh;
-    
-}
-
-.form-contato form{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: .5rem;  
-    width: 100vw; 
-    height: 80vh;
-    margin-top: 5rem;
-}
-
-.label-input{
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100vw;
-}
-
-.label-input label{
-    width: 100%;
-    margin: .5rem auto;
-    font-size: 3rem;
-    font-weight: 500;
-    text-indent: 3rem;
-}
-
-.label-input input{
-    height: 5rem;
-}
-
-.label-input input, textarea{
-    outline: none;
-    margin: auto;
-    width: 90vw;
-    border: none;
-    border-bottom: solid 0.1rem #eee;
-    background: transparent;
-    font-size: 1.5rem;
-}
-
-.label-input textarea{
-    min-height: 25vh;
-    max-height: 25vh;
-    min-width: 90%;
-    max-width: 90%;
-}
-
-.f-btn{
-    width: 30vw;
-    height: 6vh;
-    color: #17191A;
-}
-
-.divider{
-    width: 100%;
-    border-bottom: solid rgba(238, 238, 238, 0.241) .1rem;
-}
-/*======================= FOOTER ===============================*/
-#footer{
-    margin-top: 2rem;
-    width: 100vw;
-    height: 30vh;
-    
-}
-#footer p{
-    margin: auto;
-    width: 90%;
-    font-size: 1.5rem;
-    text-align: center;
-    hyphens: auto;
-}
-
-#footer ul{
-    margin: 2rem auto;
-    height: 70%;
-}
-
-#footer ul li{
-    list-style-type: none;
-    font-size: 2.5rem;
-    text-align: center;
+    background-color: #F2F2F0;
+    width: 80%;
+    height: 45%;
     margin-top: 1rem;
 }
 
 
+.skills .skills-items{
+    height: 70%;
+    margin-top: 1.5rem;
+    display: flex;
+}
 
+.skills .skills-items ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skills .skills-items ul li{
+    font-size: 2rem;
+    font-family: var(--itens-font);
+    padding-left: 1.5rem;
+}
+
+.progress-bars{
+    width: 50vw;
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    margin-left: 1rem;
+
+}
+
+.bar{
+    width: 80%;
+    height: 2.5vh;
+    background-color: #300D0B;
+}
+
+.progress{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--itens-font);
+    font-weight: 500;
+    color: #1F261F;
+    background-color: #CBCBCB;
+    height: 100%;
+    animation-name: move-progress;
+    animation-duration: 1s;
+}
+
+@keyframes move-progress {
+    0%{
+        width: 1%;
+        
+    } 
+}
+
+/*======================== MAIN - PROJETOS ========================*/
+#projetos{
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    margin-top: 1.5rem;
+    border-top: solid  .5px rgba(66, 66, 66, 0.089);
+}
+
+.projetos-container{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projetos-container .projeto{
+    width: 100%;
+    height: 30%;
+    background-color: #300d0b3d;
+    display: flex;
+    flex-direction: column;
+}
+.projetos-container .projeto h4{
+    color: #F2F2F0;
+    font-size: 3rem;
+    font-family: var(--title-font);
+    font-weight: 300;
+    text-align: center;
+}
+
+.projetos-container .projeto p{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: var(--para-font);
+    line-height: 1.8rem;
+    text-align: justify;
+    text-indent: 1.5rem;
+    hyphens: auto;
+    padding: 1.5rem;
+}
+
+.projetos-container .projeto a{
+    margin: auto;
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: var(--itens-font);
+    transition: all .5s;
+}
+
+.projetos-container .projeto a:hover{
+    background-color: #cbcbcb59;
+    border-radius: 5px;
+    padding: .3rem;
+}
+
+.projetos-container .projeto1{
+    background-image: url('../images/project-banner1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+}
+
+.projetos-container .projeto2{
+    background-image: url(../images/project-banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+}
+
+
+.projetos-container .projeto3{
+    background-image: url(../images/project-banner3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+}
+
+/*=========================== SEÇÃO - CONTATO =================================*/
+#contato{
+    background-color: #faf9f9;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    border-top: solid .1rem rgba(0, 0, 0, 0.11);
+}
+
+.form-contato{
+    width: 80%;
+    height: 90vh;
+ 
+}
+
+.form-contato form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.label-input{
+    width: 100%;
+    position: relative;
+    margin-top: 5rem;
+    
+    
+}
+
+.label-input .label{
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    font-size: 2rem;
+    font-family: var(--itens-font);
+    color: #300d0b85;
+    font-style: italic;
+    padding: 1rem;
+    transition: all 1s;
+}
+
+.input:focus  ~ .label{
+    bottom: 4rem;
+}
+
+
+.label-input .input{
+    width: 91%;
+    height: 5vh;
+    border-bottom: solid .5px rgba(0, 0, 0, 0.521);
+    background:none ;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #1f261fb7;
+    line-height: 1.5rem;
+
+}
+
+.label-input textarea{
+    min-width: 91%;
+    max-width: 91%;
+    min-height: 5vh;
+    max-height: 5vh;
+}
+
+
+.f-btn{
+    font-size: 2rem;
+    font-family: var(--itens-font);
+    font-weight: 400;
+    padding: .5rem;
+    color: #f1ebeb;
+    background-color: #73463C;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+/*===================== FOOTER ==========================*/
+#footer{
+    width: 100%;
+    height: 20vh;
+    border-top: solid .1px rgba(0, 0, 0, 0.219);
+}
+
+.cpr{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--para-font);
+    text-align: center;
+    color: #300D0B;
+}
+
+.social-container{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-container li i{
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    color: #300D0B;
+    transition: all 1s;
+}
+
+.social-container li i:hover{
+    color: #5c1814;
+}
