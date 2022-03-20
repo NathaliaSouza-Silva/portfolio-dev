@@ -153,9 +153,10 @@ li{
 
 
 /*====================== MAIN - SOBRE ==============================*/
+    /*INTRODUÇÃO*/
 #sobre{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,61 +164,63 @@ li{
 
 .greeting{
     background-color: #F2F2F0;
-    width: 80%;
-    height: 50%;
-    margin-top: 2.5rem;
+    width: 90%;
+    height: 70vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 
 .greeting p{
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     font-family: var(--para-font);
-    line-height: 2.5rem;
-    text-indent: 2rem;
+    font-weight: 500;
     text-align: justify;
-    hyphens: auto;
-    padding: 1rem;
+    text-indent: 1rem;
+    color: #1f261fbe;
+    padding: .5rem;
+    width: 95%;
 }
+
+    /*SKILLS*/
 
 .skills{
     background-color: #F2F2F0;
-    width: 80%;
-    height: 45%;
-    margin-top: 1rem;
+    width: 90%;
+    height: 60vh;
+    margin: auto;
 }
 
-
-.skills .skills-items{
-    height: 70%;
-    margin-top: 1.5rem;
-    display: flex;
-}
 
 .skills .skills-items ul{
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
+
+
 .skills .skills-items ul li{
-    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.skills .skills-items ul li span{
+    font-size: 1.5rem;
     font-family: var(--itens-font);
     padding-left: 1.5rem;
 }
 
-.progress-bars{
-    width: 50vw;
-    height: 38vh;
-    display: flex;
-    flex-direction: column;
-    gap: 3.4rem;
-    margin-left: 1rem;
-
-}
 
 .bar{
-    width: 80%;
-    height: 2.5vh;
+    width: 70%;
+    height: 3.5vh;
     background-color: #300D0B;
 }
 
@@ -278,19 +281,20 @@ li{
 
 .projetos-container .projeto p{
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: var(--para-font);
-    line-height: 1.8rem;
+    font-weight: 500;
     text-align: justify;
-    text-indent: 1.5rem;
     hyphens: auto;
-    padding: 1.5rem;
+    width: 95%;
+    margin: auto;
+ 
 }
 
 .projetos-container .projeto a{
     margin: auto;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: var(--itens-font);
     transition: all .5s;
 }
